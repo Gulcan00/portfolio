@@ -94,6 +94,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 article,
 aside,
 details,
@@ -109,6 +110,9 @@ section {
 }
 body {
   line-height: 1;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--white-smoke);
 }
 ol,
 ul {
@@ -133,4 +137,17 @@ table {
 h1.title {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.375rem;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  min-height: inherit;
+}
+
+.card {
+  background-color: white;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
