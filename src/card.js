@@ -2,8 +2,8 @@ export default function Card({
   screenshotUrl,
   title,
   description,
-  repoLink,
-  liveLink,
+  repoLink = '#',
+  liveLink = '#',
 }) {
   const cardContainer = document.createElement('div');
   cardContainer.classList.add('card');
@@ -11,12 +11,13 @@ export default function Card({
   const cardImg = document.createElement('img');
   cardImg.src = screenshotUrl;
   cardImg.width = 300;
-  cardImg.height = 'auto';
 
   cardContainer.appendChild(cardImg);
 
   const cardBody = document.createElement('div');
+  cardBody.classList.add('card-body');
   const titleH2 = document.createElement('h2');
+  titleH2.classList.add('title');
   titleH2.textContent = title;
   cardBody.appendChild(titleH2);
 
