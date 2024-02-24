@@ -86,3 +86,48 @@ h2.title {
   justify-content: center;
   font-size: 2rem;
 }
+
+footer,
+.profile,
+.about-me {
+  position: relative;
+}
+
+footer img {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+}
+
+.profile img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.profile .name {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 0;
+  color: var(--text-dark-primary);
+}
+
+.about-me::after {
+  content: '';
+  background-color: var(--picton-blue);
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  z-index: -1;
+  transform: skewY(-30deg);
+  padding-top: 2em;
+}
