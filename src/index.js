@@ -34,12 +34,10 @@ function myWorks() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo nunc, malesuada vitae congue a, lacinia id mi. Quisque tempor nibh libero, sed aliquet est sollicitudin vel. ',
     },
   ];
-  const workSection = document.querySelector('.my-work');
-  const cardsDiv = document.createElement('div');
+  const cardsDiv = document.querySelector('.cards-container');
   works.forEach((work) => {
     cardsDiv.appendChild(Card(work));
   });
-  workSection.appendChild(cardsDiv);
 }
 
 myWorks();
