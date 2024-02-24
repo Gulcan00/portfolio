@@ -43,6 +43,10 @@ h3 {
   margin-top: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1500px;
   width: 90%;
@@ -70,19 +74,15 @@ h2.title {
   gap: 50px;
 }
 
-.card {
-  background-color: white;
-  box-shadow:
-    rgba(0, 0, 0, 0.16) 0px 3px 6px,
-    rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-.card-body {
-  padding: 1rem;
-}
-
 .contact-me,
 .contact-me .title {
   background-color: var(--bice-blue);
   color: var(--text-dark-primary);
+}
+
+.social-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  font-size: 2rem;
 }
