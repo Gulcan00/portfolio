@@ -16,10 +16,10 @@ export default function Card({
 
   const cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
-  const titleH2 = document.createElement('h2');
-  titleH2.classList.add('title');
-  titleH2.textContent = title;
-  cardBody.appendChild(titleH2);
+  const titleH3 = document.createElement('h3');
+  titleH3.classList.add('title');
+  titleH3.textContent = title;
+  cardBody.appendChild(titleH3);
 
   const repoIcon = document.createElement('a');
   repoIcon.innerHTML = '<i class="devicon-github-original colored"></i>';
