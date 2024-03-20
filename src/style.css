@@ -40,11 +40,18 @@ footer {
 h1,
 h2,
 h3 {
-  margin-top: 0;
+  margin: 0;
 }
 
-a {
+.link {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.link:hover,
+.link:focus {
+  opacity: 0.75;
 }
 
 .container {
@@ -72,42 +79,34 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
-}
-
-.contact-me,
-.contact-me .title {
-  background-color: var(--bice-blue);
-  color: var(--text-dark-primary);
+  margin: 1em 0;
 }
 
 .social-links {
   display: flex;
-  gap: 30px;
   justify-content: center;
+  gap: 30px;
   font-size: 2rem;
 }
 
-footer,
 .profile,
-.about-me {
+.about-me,
+.contact-me {
   position: relative;
-}
-
-footer img {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
 }
 
 .profile {
   display: flex;
   justify-content: center;
+  margin-bottom: 2em;
 }
 
 .profile img {
   width: 100%;
   max-width: 300px;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .profile .name {
@@ -119,6 +118,17 @@ footer img {
   color: var(--text-dark-primary);
 }
 
+/* .about-me::before {
+  content: '';
+  background-color: var(--picton-blue);
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  transform: skewY(-30deg);
+} */
+
 .about-me::after {
   content: '';
   background-color: var(--picton-blue);
@@ -129,5 +139,34 @@ footer img {
   height: 60%;
   z-index: -1;
   transform: skewY(-30deg);
-  padding-top: 2em;
+  transform-origin: top;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.contact-me,
+.contact-me .title {
+  background-color: var(--bice-blue);
+  color: var(--text-dark-primary);
+}
+
+.contact-me img {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.contact-me p {
+  font-size: 1.125rem;
+}
+
+.contact-me .link {
+  color: #111827;
+}
+
+.contact-me .material-symbols-outlined {
+  color: #d1d5db;
+  font-size: 1.125rem;
 }

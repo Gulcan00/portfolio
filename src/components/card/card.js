@@ -27,13 +27,16 @@ export default function Card({
   const iconsDiv = document.createElement('div');
   iconsDiv.classList.add('links');
   const repoIcon = document.createElement('a');
-  repoIcon.innerHTML = '<i class="devicon-github-original colored"></i>';
+  repoIcon.classList.add('link');
+  repoIcon.innerHTML =
+    '<i class="devicon-github-original colored" aria-label="Github"></i>';
   repoIcon.href = repoLink;
   iconsDiv.appendChild(repoIcon);
 
   const liveIcon = document.createElement('a');
+  liveIcon.classList.add('link');
   liveIcon.innerHTML =
-    '<span class="material-symbols-outlined">open_in_new</span>';
+    '<span class="material-symbols-outlined" aria-label="Live Demo">open_in_new</span>';
   liveIcon.href = liveLink;
   iconsDiv.appendChild(liveIcon);
 
