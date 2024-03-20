@@ -10,8 +10,9 @@ export default function Card({
   const cardContainer = document.createElement('div');
   cardContainer.classList.add('card');
 
-  const cardImg = document.createElement('img');
-  cardImg.src = screenshotUrl;
+  const cardImg = document.createElement('div');
+  cardImg.classList.add('card__img');
+  cardImg.style.backgroundImage = `url(${screenshotUrl})`;
 
   cardContainer.appendChild(cardImg);
 

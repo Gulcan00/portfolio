@@ -5,6 +5,13 @@
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+.card__img {
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .card__body {
   padding: 1rem;
 }

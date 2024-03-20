@@ -178,3 +178,25 @@ h3 {
   gap: 10px;
   margin-bottom: 0.75em;
 }
+
+@media (min-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .title--secondary {
+    text-align: left;
+  }
+
+  .contact-me .social-links {
+    justify-content: flex-start;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .contact-me img {
+    position: static;
+  }
+}
