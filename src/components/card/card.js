@@ -12,7 +12,6 @@ export default function Card({
 
   const cardImg = document.createElement('img');
   cardImg.src = screenshotUrl;
-  cardImg.width = 300;
 
   cardContainer.appendChild(cardImg);
 
