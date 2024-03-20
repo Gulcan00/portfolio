@@ -194,9 +194,16 @@ h3 {
 
   .row {
     display: flex;
+    justify-content: space-between;
   }
 
   .contact-me img {
     position: static;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
