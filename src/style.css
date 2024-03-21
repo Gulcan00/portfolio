@@ -70,7 +70,7 @@ h3 {
   font-size: 2.25rem;
 }
 
-.cards-container {
+.my-work__cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
@@ -90,13 +90,14 @@ h3 {
   position: relative;
 }
 
-.profile {
+.about-me__profile {
   display: flex;
   justify-content: center;
   margin-bottom: 2em;
+  position: relative;
 }
 
-.profile img {
+.about-me__profile img {
   width: 100%;
   height: auto;
   max-width: 400px;
@@ -105,24 +106,13 @@ h3 {
     0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
-.profile .name {
+.about-me__profile .name {
   position: absolute;
   bottom: 0;
   left: 5%;
   margin: 0;
   color: var(--text-dark-primary);
 }
-
-/* .about-me::before {
-  content: '';
-  background-color: var(--picton-blue);
-  position: absolute;
-  top: -20%;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  transform: skewY(-30deg);
-} */
 
 .about-me::after {
   content: '';
@@ -181,7 +171,7 @@ h3 {
 }
 
 @media (min-width: 600px) {
-  .cards-container {
+  .my-work__cards {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -202,17 +192,65 @@ h3 {
     position: static;
   }
 
-  .info {
+  .about-me__content {
     width: 50%;
   }
 
-  .img {
+  .contact-me__img {
     width: 40%;
+  }
+
+  .about-me__content .social-links {
+    display: none;
+  }
+
+  .about-me::before {
+    content: '';
+    background-color: var(--picton-blue);
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    transform: skewY(-10deg);
+    z-index: -1;
+  }
+
+  .about-me::after {
+    top: 0;
+    transform: skewY(-10deg);
+  }
+
+  .about-me__content {
+    background-color: white;
+    box-shadow:
+      rgba(0, 0, 0, 0.16) 0px 3px 6px,
+      rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
 }
 
 @media (min-width: 1200px) {
-  .cards-container {
+  .my-work__cards {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .about-me__content .social-links {
+    display: flex;
+  }
+
+  .contact-me__details {
+    width: 30%;
+  }
+
+  .contact-me__img {
+    width: 60%;
+  }
+
+  .contact-me {
+    font-size: 1.125rem;
+  }
+
+  .about-me::after {
+    top: 10%;
   }
 }

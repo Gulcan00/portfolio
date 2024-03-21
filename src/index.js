@@ -58,7 +58,7 @@ function myWorks() {
       liveLink: 'https://gulcan00.github.io/connect-four/',
     },
   ];
-  const cardsDiv = document.querySelector('.cards-container');
+  const cardsDiv = document.querySelector('.my-work__cards');
   works.forEach((work) => {
     cardsDiv.appendChild(Card(work));
   });
