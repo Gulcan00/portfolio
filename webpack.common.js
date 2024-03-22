@@ -13,12 +13,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // Note: enable processing of HTML files from entry
-      {
-        test: /\.html$/,
-        loader: HtmlBundlerPlugin.loader, // HTML loader
-      },
-
       {
         test: /\.css$/i,
         // Note: this plugin extracts CSS self, no style-loader needed
